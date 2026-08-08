@@ -41,15 +41,6 @@ CREATE TABLE IF NOT EXISTS clientes (
     telefono STRING
 );
 
-ALTER TABLE productos ALTER COLUMN categoria_id DROP NOT NULL;
-
--- permite agregar un campo
-ALTER TABLE clientes set TBLPROPERTIES ('delta.ColumnMapping.mode' = 'name')
-ALTER TABLE clientes ADD COLUMN(
-    dni STRING NOT NULL
-);
-
-SHOW TABLES;
 
 INSERT INTO categorias (id, nombre) VALUES
 (1,'Electricidad'),
@@ -57,9 +48,6 @@ INSERT INTO categorias (id, nombre) VALUES
 (3,'Hogar'),
 (4,'Deportes'),
 (5,'Juguetes');
-
-SELECT * FROM categorias;
-
 
 INSERT INTO clientes (id, nombre, email, pais, telefono) VALUES
   (1,  'Ana López',       'ana.lopez@gmail.com',      'ES', '600111222'),
@@ -135,6 +123,26 @@ INSERT INTO detalle_pedidos (pedido_id, producto_id, cantidad, precio_unit) VALU
   (16, 10, 1,  15.99);
 
 
+
+
+ENTREGABLE_2
+
+FILE > EXPORT > IPYTHON NOTEBOOK < SUBIR A GIT HUB
+
+SEMANA 5
+
+
+ALTER TABLE productos ALTER COLUMN categoria_id DROP NOT NULL;
+
+-- permite agregar un campo
+ALTER TABLE clientes set TBLPROPERTIES ('delta.ColumnMapping.mode' = 'name')
+ALTER TABLE clientes ADD COLUMN(
+    dni STRING NOT NULL
+);
+
+SHOW TABLES;
+
+
 DELETE FROM categorias 
 WHERE id = 4;
 
@@ -174,7 +182,7 @@ WHERE precio <> 40;
 
 SELECT *
 FROM productos
-WHERE precio iIN (25,60);
+WHERE precio IN (25,60);
 
 SELECT *
 FROM productos
