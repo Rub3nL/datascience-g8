@@ -9,5 +9,21 @@ wheels/
 # Virtual environments
 .venv
 
+# Datos del curso
 repos
 data
+
+.DS_Store
+.claude
+
+
+# Model checkpoints
+models
+
+#
+notebooks_tutoriales
+runs
+
+# Ignorar pesos de modelos y carpetas de ejecuciones
+*.pt
+notebooks/runs/
