@@ -1,4 +1,7 @@
-# Python-generated files
+# ==========================================
+# PYTHON & ENTORNOS VIRTUALES
+# ==========================================
+# Archivos generados por Python y compilación
 __pycache__/
 *.py[oc]
 build/
@@ -6,24 +9,34 @@ dist/
 wheels/
 *.egg-info
 
-# Virtual environments
-.venv
+# Entornos virtuales
+.venv/
+venv/
+ENV/
 
-# Datos del curso
-repos
-data
-
-.DS_Store
-.claude
-
-
-# Model checkpoints
-models
-
-#
-notebooks_tutoriales
-runs
-
-# Ignorar pesos de modelos y carpetas de ejecuciones
+# ==========================================
+# CIENCIA DE DATOS Y MACHINE LEARNING
+# ==========================================
+# Modelos, pesos y puntos de control (Checkpoints)
 *.pt
+*.pth
+*.weights
+*.onnx
+models/
+
+# Carpetas de ejecuciones, logs y salidas de entrenamiento
+runs/
 notebooks/runs/
+
+# Datos y repositorios locales de trabajo
+data/
+repos/
+
+# ==========================================
+# CONFIGURACIONES Y SISTEMA OPERATIVO
+# ==========================================
+.DS_Store
+Thumbs.db
+.claude/
+.vscode/
+.ipynb_checkpoints/
