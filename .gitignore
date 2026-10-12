@@ -23,6 +23,7 @@ ENV/
 *.weights
 *.onnx
 models/
+.results
 
 # Carpetas de ejecuciones, logs y salidas de entrenamiento
 runs/
